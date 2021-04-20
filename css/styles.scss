@@ -1,0 +1,119 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 10px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    font-family: arial, sans-serif;
+    margin: 50px auto;
+    overflow: hidden;
+    width: 600px;
+
+    &-navbar {
+      width: 100%;
+      position: relative;
+
+      &-item {
+        align-items: center;
+        color: rgba(0, 0, 0, 0.459);
+        display: flex;
+        float: left;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+        text-decoration: none;
+        width: 25%;
+
+        span {
+          display: inline-block;
+          font-size: 0.8rem;
+          transition: 0.5s ease-in-out;
+          width: 100%;
+        }
+
+        i {
+          align-items: center;
+          border: 2px solid rgba(0, 0, 0, 0.459);
+          border-radius: 50%;
+          display: flex;
+          font-size: 1.4rem;
+          height: 50px;
+          justify-content: center;
+          margin-bottom: 4px;
+          transition: 0.5s ease-in-out;
+          width: 50px;
+        }
+
+        &:nth-child(1).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+          left: 0;
+        }
+
+        &:nth-child(2).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+          left: 25%;
+        }
+
+        &:nth-child(3).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+          left: 50%;
+        }
+
+        &:nth-child(4).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+          left: 75%;
+        }
+      }
+
+      &-bar {
+        background-color: rgb(204, 204, 204);
+        border-radius: 5px;
+        bottom: 0;
+        display: block;
+        height: 5px;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+
+        &-percentage {
+          background-color: rgba(0, 0, 0, 0.822);
+          border-radius: 5px;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          transition: 0.5s ease-in-out;
+          width: 25%;
+        }
+      }
+
+      .active {
+        color: rgba(0, 0, 0, 0.822);
+        i {
+          color: inherit;
+          border: 2px solid rgba(0, 0, 0, 0.822);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 620px) {
+  .container {
+    .menu {
+      padding: 0 20px;
+    }
+  }
+}

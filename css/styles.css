@@ -1,0 +1,151 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 10px;
+}
+
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: arial, sans-serif;
+  margin: 50px auto;
+  overflow: hidden;
+  width: 600px;
+}
+
+.container .menu-navbar {
+  width: 100%;
+  position: relative;
+}
+
+.container .menu-navbar-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(0, 0, 0, 0.459);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 25%;
+}
+
+.container .menu-navbar-item span {
+  display: inline-block;
+  font-size: 0.8rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+}
+
+.container .menu-navbar-item i {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.459);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 4px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 50px;
+}
+
+.container .menu-navbar-item:nth-child(1).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+  left: 0;
+}
+
+.container .menu-navbar-item:nth-child(2).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+  left: 25%;
+}
+
+.container .menu-navbar-item:nth-child(3).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+  left: 50%;
+}
+
+.container .menu-navbar-item:nth-child(4).active ~ .menu-navbar-bar > .menu-navbar-bar-percentage {
+  left: 75%;
+}
+
+.container .menu-navbar-bar {
+  background-color: #cccccc;
+  border-radius: 5px;
+  bottom: 0;
+  display: block;
+  height: 5px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container .menu-navbar-bar-percentage {
+  background-color: rgba(0, 0, 0, 0.822);
+  border-radius: 5px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  width: 25%;
+}
+
+.container .menu-navbar .active {
+  color: rgba(0, 0, 0, 0.822);
+}
+
+.container .menu-navbar .active i {
+  color: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.822);
+}
+
+@media all and (max-width: 620px) {
+  .container .menu {
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
